@@ -8,8 +8,8 @@ function keyUp() {
     let limitKredit = 0;
     limitCalc.addEventListener("click", (e) => {
         e.preventDefault()
-        limitCalc.style.display = "none"
         if (maosh.value >= 1800000) {
+            limitCalc.style.display = "none";
             if (maosh.value >= 1800000 && maosh.value < 4000000) {
                 limitKredit = 10000000;
                 limit.innerHTML = limitKredit;
@@ -35,6 +35,7 @@ function keyUp() {
                 console.log(limitKredit);
             }
         } else {
+            hideRow.style.display = "flex"
             limit.innerHTML = limitKredit;            
         }
     })
